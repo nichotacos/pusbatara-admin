@@ -3,27 +3,19 @@ import { Package } from "@/types/package";
 const packageData: Package[] = [
   {
     name: "Free package",
-    price: 0.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
+    amount_goal: 0.0,
   },
   {
     name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
+    amount_goal: 59.0,
   },
   {
     name: "Business Package",
-    price: 99.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Unpaid",
+    amount_goal: 99.0,
   },
   {
     name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Pending",
+    amount_goal: 59.0,
   },
 ];
 
@@ -40,12 +32,6 @@ const TableThree = () => {
               <th className="min-w-[150px] px-4 py-4 font-medium text-black dark:text-white">
                 Invoice date
               </th>
-              <th className="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white">
-                Status
-              </th>
-              <th className="px-4 py-4 font-medium text-black dark:text-white">
-                Actions
-              </th>
             </tr>
           </thead>
           <tbody>
@@ -55,25 +41,7 @@ const TableThree = () => {
                   <h5 className="font-medium text-black dark:text-white">
                     {packageItem.name}
                   </h5>
-                  <p className="text-sm">${packageItem.price}</p>
-                </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <p className="text-black dark:text-white">
-                    {packageItem.invoiceDate}
-                  </p>
-                </td>
-                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <p
-                    className={`inline-flex rounded-full bg-opacity-10 px-3 py-1 text-sm font-medium ${
-                      packageItem.status === "Paid"
-                        ? "bg-success text-success"
-                        : packageItem.status === "Unpaid"
-                          ? "bg-danger text-danger"
-                          : "bg-warning text-warning"
-                    }`}
-                  >
-                    {packageItem.status}
-                  </p>
+                  <p className="text-sm">${packageItem.amount_goal}</p>
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <div className="flex items-center space-x-3.5">

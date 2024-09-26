@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import TableOne from "@/components/Tables/TableOne";
 import TableThree from "@/components/Tables/TableThree";
 import TableTwo from "@/components/Tables/TableTwo";
+import PackageTable from "@/components/Tables/PackagesTable";
 
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
@@ -19,8 +20,9 @@ const TablesPage = () => {
 
       <div className="flex flex-col gap-10">
         <TableOne />
-        <TableTwo />
-        <TableThree />
+        <PackageTable />
+        {/* <TableTwo />
+        <TableThree /> */}
       </div>
     </DefaultLayout>
   );
