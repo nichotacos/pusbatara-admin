@@ -114,23 +114,15 @@ const TransactionsTable: React.FC = () => {
 
             <div className="flex items-center justify-center p-2.5 xl:p-5">
               {/* <p className="text-black dark:text-white">{transcation.transaction_receipt}</p> */}
-              <Popover placement="bottom" color="secondary" className="rounded-xl">
-                <PopoverTrigger>
-                  <Button>View Receipt</Button>
-                </PopoverTrigger>
-                <PopoverContent className="rounded-xl">
-                  <div className="px-1 py-2">
-                    <div className="text-small font-bold text-white">Receipt URL</div>
-                    <a href={transcation.transaction_receipt} target="_blank" className="text-small underline text-blue-800">Open</a>
-                  </div>
-                </PopoverContent>
-              </Popover>
+              <div className="px-1 py-2">
+                <a href={transcation.transaction_receipt} target="_blank" className="text-small underline text-blue-800 dark:text-white">Open Receipt</a>
+              </div>
             </div>
 
             <div className="flex items-center justify-center p-2.5 xl:p-5">
               {transcation.payment_method ? (
                 <p className="text-black dark:text-white">{transcation.payment_method}</p>
-              ) : <p className="text-black dark:text-white">Tunai</p>}
+              ) : <p className="text-black dark:text-white">Diisi ketika approving receipt</p>}
             </div>
           </div>
         ))}

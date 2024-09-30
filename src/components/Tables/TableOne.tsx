@@ -90,7 +90,7 @@ const TableOne: React.FC = () => {
             </div>
 
             <div className="flex items-center justify-center p-2.5 xl:p-5">
-              <p className="text-black">{donator.province}</p>
+              <p className="text-black dark:text-white">{donator.province}</p>
             </div>
 
             <div className="flex items-center justify-center p-2.5 sm:flex xl:p-5">
