@@ -3,6 +3,7 @@ import TableOne from "@/components/Tables/TableOne";
 import TableThree from "@/components/Tables/TableThree";
 import TableTwo from "@/components/Tables/TableTwo";
 import PackageTable from "@/components/Tables/PackagesTable";
+import TransactionsTable from "@/components/Tables/TransactionsTable";
 
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
@@ -21,6 +22,7 @@ const TablesPage = () => {
       <div className="flex flex-col gap-10">
         <TableOne />
         <PackageTable />
+        <TransactionsTable />
         {/* <TableTwo />
         <TableThree /> */}
       </div>
